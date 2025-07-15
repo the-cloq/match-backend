@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('AI Dating Backend is running!');
+});
+
 // ✅ Turso (libSQL) client setup
 const db = createClient({
   url: process.env.TURSO_URL,
